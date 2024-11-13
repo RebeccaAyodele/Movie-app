@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-slate-950">
+<body class="dark:bg-black">
 
   <!-- FOR MOBILE DEVICES -->
   <nav id="nav-bar" class="nav-bar fixed inset-0">
-    <div id="dropdown-menu" class="nav-after-toggle text-white mb-[3rem] hidden transition-all duration-300 ease-in-out">
+    <div id="dropdown-menu" class="nav-after-toggle dark:text-gray-200 text-slate-900 mb-[3rem] hidden transition-all duration-300 ease-in-out">
       <ul class="space-y-8 my-10 mx-6">
         <li><a href="#">Home</a></li>
         <li><a href="#">Category</a></li>
@@ -23,12 +23,12 @@
 
     <div class="nav-before-toggle flex justify-between cursor-pointer mx-6 mt-10">
       <div class="left flex space-x-6">
-        <i id="menu-icon" onclick="toggleMenu()" class="fa-solid fa-bars text-white text-3xl lg:hidden mt-[3px]"></i>
-        <h1 class="text-white text-3xl font-sans tracking-wide font-semibold ">Cine<span class="text-blue-500">Flix</span></h1>
+        <i id="menu-icon" onclick="toggleMenu()" class="fa-solid fa-bars dark:text-gray-200 text-slate-900 text-3xl lg:hidden mt-[3px]"></i>
+        <h1 class="dark:text-gray-200 text-slate-900 text-3xl font-sans tracking-wide font-semibold ">Movie<span class="text-orange-500">Flix</span></h1>
       </div>
 
        <!-- DESPTOP SCREEN -->
-    <div  id="dropdown-menu-desktop" class="nav-after-toggle text-white mb-[3rem] hidden lg:flex md:hidden space-x-4 m-2 mr-6">
+    <div  id="dropdown-menu-desktop" class="nav-after-toggle dark:text-gray-200 text-slate-900 mb-[3rem] hidden lg:flex md:hidden space-x-4 m-2 mr-6">
       <ul class="flex space-x-4">
         <li><a href="#">Home</a></li>
         <li><a href="#">Category</a></li>
@@ -40,11 +40,13 @@
     </div>
 
       <div class="right flex space-x-6 mt-2">
-        <input class="search bg-slate-900 rounded placeholder:text-white h-8" type="search" name="search" id="search" placeholder="I'm looking for...">
-        <i onclick="searchButton()" class="fa-solid fa-magnifying-glass text-blue-500 text-xl"></i>
+        <div class="dark:bg-slate-900 bg-gray-100 rounded px-4 py-{5px} h-8">
+          <input class="search dark:bg-slate-900 bg-gray-100 rounded dark:placeholder:text-gray-200 dark:text-gray-200 h-8 focus:outline-none" type="search" name="search" id="search" placeholder="I'm looking for...">
+          <i onclick="searchButton()" class="fa-solid fa-magnifying-glass text-orange-500 text-xl"></i>
+        </div>
         <div class="sign-in flex space-x-2">
-          <p class="text-white hover:text-blue-500">Sign in</p>
-          <i class="fa fa-arrow-right-to-bracket text-blue-500 text-xl"></i>
+          <p class="dark:text-gray-200 text-slate-900 hover:text-orange-500">Sign in</p>
+          <i class="fa fa-arrow-right-to-bracket text-orange-500 text-xl"></i>
         </div>
       </div>
     </div>
