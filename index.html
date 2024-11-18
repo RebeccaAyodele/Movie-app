@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark:bg-black">
+<body class="dark:bg-black bg-gray-200">
 
   <!-- FOR MOBILE DEVICES -->
-  <nav id="nav-bar" class="nav-bar fixed inset-0 z-10">
-    <div id="dropdown-menu" class="nav-after-toggle dark:text-gray-200 text-slate-900 mb-[3rem] hidden transition-all duration-300 ease-in-out">
+  <nav id="nav-bar" class="nav-bar fixed z-10 dark:bg-black w-full h-[8rem]">
+    <div id="dropdown-menu" class="nav-after-toggle dark:text-gray-200 text-slate-900 mb-[3rem] hidden">
       <ul class="space-y-8 my-10 mx-6">
         <li><a href="#">Home</a></li>
         <li><a href="#">Category</a></li>
@@ -24,39 +24,41 @@
     <div class="nav-before-toggle flex justify-between cursor-pointer mx-6 mt-10">
       <div class="left flex space-x-6">
         <i id="menu-icon" onclick="toggleMenu()" class="fa-solid fa-bars dark:text-gray-200 text-slate-900 text-3xl lg:hidden mt-[3px]"></i>
-        <h1 class="dark:text-gray-200 text-slate-900 text-3xl font-sans tracking-wide font-semibold ">Movie<span class="text-orange-500">Flix</span></h1>
+        <h1 class="dark:text-gray-200 text-slate-900 text-3xl font-sans tracking-wide font-semibold px-10">Movie<span class="text-orange-500">Flix</span></h1>
       </div>
-
-       <!-- DESPTOP SCREEN -->
-    <div  id="dropdown-menu-desktop" class="nav-after-toggle dark:text-gray-200 text-slate-900 mb-[3rem] hidden lg:flex md:hidden space-x-4 m-2 mr-6">
+     
+   
+      <!-- FOR DESKTOP SCREEN -->
+    <div id="dropdown-menu-desktop" class="nav-after-toggle dark:text-gray-200 text-slate-900 mb-[3rem] lg:flex hidden space-x-4 mr-6 mt-2 h-[6rem] dark:bg-black z-10">
       <ul class="flex space-x-4">
         <li><a href="#" class="px-4">Home</a></li>
         <li><a href="#" class="px-4">Category</a></li>
       </ul>
       <div class="flex"><a href="#" class="px-4">LIVE </a><div class="red-dot h-[8px] w-[8px] bg-red-500 m-2 rounded"></div></div>
     </div>
-    <div>
-      
-    </div>
 
-    <div class="form right flex space-x-6 mt-2justify-center">
-      <div class="search dark:bg-slate-900 bg-gray-100 rounded px-4 py-{5px} h-8 ">
-        <input class="dark:bg-slate-900 bg-gray-100 rounded dark:placeholder:text-gray-200 dark:text-gray-200 h-8 focus:outline-none lg:w-[30rem] md:w-[15rem]" type="search" name="search" id="search-mobile" placeholder="I'm looking for...">
-        <i onclick="searchButton()" class="fa-solid fa-magnifying-glass text-orange-500 text-xl"></i>
-      </div>
-      <div class="sign-in flex space-x-2">
-        <p class="dark:text-gray-200 text-slate-900 hover:text-orange-500">Sign in</p>
-        <i class="fa fa-arrow-right-to-bracket text-orange-500 text-xl"></i>
-      </div>
-      </div>
+    <div class="form right bg-slate-900 space-x-6 h-10 mr-[6rem] rounded-xl">
+      <form id="form-desktop" class="search-container dark:bg-slate-900 bg-gray-100 px-4 py-[5px] rounded-xl flex">
+        <input class="form dark:bg-slate-900 bg-gray-100 dark:placeholder:text-gray-200 dark:text-gray-200 h-8 focus:outline-none lg:w-[30rem] md:w-[15rem]" type="search" name="search" id="search" placeholder="I'm looking for...">
+        <i onclick="searchButton()" class="fa-solid fa-magnifying-glass mt-2 text-orange-500 text-xl"></i>
+      </form>
     </div>
-    <div class="form search-mobile dark:bg-slate-900 bg-gray-100 px-4 h-12  flex justify-between mt-8 lg:hidden md:hidden">
-      <input class="dark:bg-slate-900 bg-gray-100 dark:placeholder:text-gray-200 dark:text-gray-200 focus:outline-none" type="search" name="search" id="search" placeholder="I'm looking for...">
-      <i onclick="searchButton()" class="fa-solid fa-magnifying-glass text-orange-500 text-xl mt-2"></i>
+    <div class="sign-in flex space-x-2 mt-2">
+      <p class="dark:text-gray-200 text-slate-900 hover:text-orange-500">Sign in</p>
+      <i class="fa fa-arrow-right-to-bracket text-orange-500 text-xl"></i>
     </div>
+  </div>
+
+    
+    
+    <form id="form-mobile" class="form-mobile search-mobile dark:bg-slate-900 bg-gray-100 px-4 flex justify-between mt-4 w-full">
+      <input class="input-mobile dark:bg-slate-900 bg-gray-100 dark:placeholder:text-gray-200  dark:text-gray-200 focus:outline-none w-full" type="search" name="search" id="search-mobile" placeholder="I'm looking for...">
+      <i onclick="searchButton()" class="fa-solid fa-magnifying-glass text-orange-500 text-xl mt-5"></i>
+    </form>  
+      
   </nav>
 
-  <main id="main"  class="absolute top-[15rem] overflow-y-hidden">
+  <main id="main" class="absolute top-[10rem] flex-wrap flex justify-center">
     <div class="movie">
         <img src="" alt="image">
 
