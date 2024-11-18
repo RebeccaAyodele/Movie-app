@@ -1,0 +1,75 @@
+@media (max-width: 620px){
+    .search-container, .form {
+        display: none;
+    }
+}
+
+@media (min-width: 620px){
+    .search-mobile,
+    .search-mobile input,
+    .search-mobile i,
+    .form-mobile, .input-mobile {
+        display: none;
+    }
+}
+
+
+.input-mobile {
+    height: 4rem;
+}
+
+.movie {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    margin: 1rem;
+}
+
+.movie-info {
+    background-color: rgb(79, 79, 79);
+}
+
+.movie-info h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.overview {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1rem;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem 1rem;
+}
+
+.overview h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.movie-info span.green {
+    color: lightgreen;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
