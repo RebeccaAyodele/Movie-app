@@ -7,7 +7,8 @@ const searchURL = BASE_URL + '/search/movie?' + API_KEY;
 const main = document.getElementById("main");
 const formDesktop = document.getElementById("form-desktop");
 const formMobile = document.getElementById("form-mobile");
-const search = document.getElementById("search");
+const searchboxDesktop = document.getElementById("searchbox-desktop");
+const searchboxMobile = document.getElementById("searchbox-mobile");
 
 function toggleMenu() {
     const dropdownMenu = document.getElementById('dropdown-menu');
@@ -58,7 +59,7 @@ function getColor(vote){
 
 formDesktop.addEventListener("submit", (e) =>{
     e.preventDefault()
-    const searchTerm = search.value;
+    const searchTerm = searchboxDesktop.value;
 
     if(searchTerm){
         getMovies(searchURL + '&query=' + searchTerm)
@@ -69,7 +70,7 @@ formDesktop.addEventListener("submit", (e) =>{
 
 formMobile.addEventListener("submit", (e) =>{
     e.preventDefault()
-    const searchTerm = search.value;
+    const searchTerm = searchboxMobile.value;
 
     if(searchTerm){
         getMovies(searchURL + '&query=' + searchTerm)
@@ -77,3 +78,25 @@ formMobile.addEventListener("submit", (e) =>{
         getMovies(API_URL);
     }
 })
+
+function searchButton(){
+    e.preventDefault()
+    const searchTerm = searchboxMobile.value;
+
+    if(searchTerm){
+        getMovies(searchURL + '&query=' + searchTerm)
+    }else {
+        getMovies(API_URL);
+    }
+}
+
+function searchButton(){
+    e.preventDefault()
+    const searchTerm = searchboxDesktop.value;
+
+    if(searchTerm){
+        getMovies(searchURL + '&query=' + searchTerm)
+    }else {
+        getMovies(API_URL);
+    }
+}
